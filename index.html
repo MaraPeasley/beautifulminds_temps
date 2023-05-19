@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- 
+NOTES:
+
+4/28/23
+Lots of changes made since creation
+See style.less for full list of notes and To Dos
+
+-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="mara peasley">
+    
+    <title>Beautiful Minds CMHWC</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+<!-- Below are the 4 stylesheets needed to run this website:
+- reset.css clears all formatting for all default css on the site
+- helper.css adds some basic formatting and functionality back
+- grid.css is not currently being used but may be needed if you want to add charts/grids in the future
+- style.css is the output of LESS from the style.less sheet used to format and style the entire site
+- -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/helper.css" rel="stylesheet" type="text/css">
+    <link href="css/grid.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+    
+<body>
+    <header>
+        <button class="hamburger"><img src="images/menu_black_24dp.svg" alt="menu button"></button>
+	    <button class="cross"><img src="images/close_black_24dp.svg" alt="close menu button"></button>
+
+        <a class="logo" href="index.html"><img src="images/becca_logo_name.svg" alt="Beautiful Minds"></a>
+
+        <div id="home">
+            <a href="index.html">
+            <img class="logo_desktop" src="images/beautifulmindlogo.svg" alt="Beautiful Minds">
+            <h1 class="logo_desktop">Community Mental Health and Wellness Center</h1></a>
+        </div>
+    </header>
+    
+    <nav class="menu">       
+        <ul>
+            <!-- <li><a href="team.html"><img src="images/hexagon_black_24dp_hollow.svg" alt=" ">About Us</a></li> -->
+            <li><a href="team.html">&#11041; Providers</a></li>
+            <li><a href="insurance.html">&#11041; Insurance</a></li>
+            <li><a href="services.html">&#11041; Services</a></li>
+            <!-- <li><a href="team.html">&#11041; Openings</a></li> -->
+            <li><a href="faq.html">&#11041; FAQs</a></li>
+            <!-- <li><a href="resources.html">&#11041; Resources</a></li> -->
+            <li><a class="urgent" href="resources.html">&#11041; Crisis Resources</a></li>
+        </ul>
+        
+    </nav>
+    
+    <nav class="menu_desktop">       
+        <ul>
+            <!-- <li><a href="team.html"><img src="images/hexagon_black_24dp_hollow.svg" alt=" ">About Us</a></li> -->
+            <li><a href="team.html">Providers</a></li>
+            <li><a href="insurance.html">Insurance</a></li>
+            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="team.html">Openings</a></li> -->
+             <li><a href="faq.html">FAQs</a></li>
+            <!-- <li><a href="resources.html">&#11041; Resources</a></li> -->
+            <li><a class="urgent" href="resources.html">Crisis Resources</a></li>
+        </ul>
+        
+    </nav>
+    
+    <main>
+        <div class="robot_bg">
+        <!-- <a class="button urgent" href="resources.html" target="_blank">Crisis Resources</a> -->
+
+        <section class="firstsection">
+            <h2>Partnering for Resilience</h2>
+            <ul>
+                <li><a class="button" href="https://beautifulminds.clientsecure.me/" target="_blank"><img src="images/account_box_black_24dp.svg" alt=" "> Patient Portal</a></li>
+                
+                <li><a class="button" href="tel:1-541-777-8805" target="_blank"><img src="images/call_black_24dp.svg" alt="phone"> 541-777-8805</a></li>
+                
+                <li><a class="button" href="https://goo.gl/maps/cEp6pXq9bYM91W9t8" target="_blank"><img src="images/location_on_black_24dp.svg" alt="location"> 1413 Charnelton St</a></li>
+
+                <li><a class="button" href="tel:1-541-314-9597" target="_blank"><img src="images/print_black.svg" alt="fax"> 541-314-9597</a></li>
+            </ul>
+        </section>
+        
+        <section class="fourthsection" style="background-color: #7ce1ec;">
+            <!-- <h2>Where are we located?</h2> -->
+            <div class="section group">
+                <div class="col span_6_of_12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.9038432951975!2d-123.09529059999998!3d44.0440417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c11e421a227311%3A0xd1d70123ae317de0!2s1413%20Charnelton%20St%2C%20Eugene%2C%20OR%2097401!5e0!3m2!1sen!2sus!4v1682886775683!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col span_6_of_12">
+                    <p>Our offices are located between Charnelton St and Olive Alley on 14th Ave.</p>
+                    <h3>Where to park:</h3>
+                    <p style="padding-top: .25em;">We have free parking around the back of the building, just off 14th Ave.</p>
+                    <img id="parkingpic" src="images/parking_photo.png" alt="photo of parking lot area">
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="secondsection">
+            <h3>About Us</h3>
+            <p><strong>Welcome to Beautiful Minds </strong> <br> Community Mental Health and Wellness Center. <br> Beautiful Minds was created to address a variety of Mental Health symptoms by empowering clients to make healthy lifestyle changes that optimize their wellbeing.  This requires a health focused approach to treatment (rather than a focus on disease process) and a client centered philosophy that respects individual beliefs and experiences. We recognize the value of educating and empowering clients through non-pharmaceutical treatment options as well as the value of psychiatric approaches when appropriate.  The ultimate goal is to partner with clients in encouraged their strengths as they work towards their healthiest life.  We welcome all ages, races, religions, identities and beliefs.</p>
+            
+        </section> -->
+        
+        <section class="thirdsection">
+            <h3>Our Team</h3>
+
+            <div class="section group">
+                <div class="providers col span_4_of_12">
+                    <img src="images/becca_hero_smile.png" alt="Photograph of Becca Henry" class="hero">
+                    <h4>Becca Henry</h4>
+                    <p>Becca sees clients across the lifespan and treats a wide range of symptoms and mental health diagnoses. She provides therapy as well as prescribing to cultivate a philosophy that focuses on holistic care.</p>
+                </div>
+
+                <div class="providers col span_4_of_12">
+                    <img src="images/ambyr_photo_larger_noleaves.png" alt="Photograph of Becca Henry" class="hero col span_4_of_12">
+                    <h4>Ambyr Stores</h4>
+                    <p>Ambyr fosters a collaborative environment that empowers individuals, recognizing their inherent drive towards wellness and using varied therapeutic strategies to facilitate their meaningful growth.</p>
+                </div>
+
+                <div class="providers col span_4_of_12">
+                    <img src="images/sarah_photo_up.png" alt="Photograph of Sarah" class="hero col span_4_of_12">
+                    <h4>Sarah Floyd</h4>
+                    <p>Sarah is our office manager, she adeptly handles administrative tasks and services, bridging the gap to get our team and you.</p>
+                </div>
+            </div>
+
+            <a class="button" href="team.html">More Info</a>
+            
+        </section>
+        </div>
+    </main>    
+    
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#home">Back to Top</a></li>
+                <li><a href="https://beautifulminds.clientsecure.me/" target="_blank">Patient Portal</a></li>
+                <li><a href="tel:1-530-555-5555">541-777-8805</a></li>
+            </ul>
+        </nav>
+        <p id="copy">&#169; Copyright Mara Elise Peasley 2023</p>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="scripts/hamburger.js"></script>
+    
+</body>
+    
+</html>

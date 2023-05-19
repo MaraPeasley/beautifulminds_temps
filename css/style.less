@@ -1,0 +1,1299 @@
+/*
+
+File Name: style.less
+Date: 05/31/21
+Programmer: Mara Peasley
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+/*NOTES:
+ - All comments updated on 04/25/23 - some small redundancies found but nothing major of concern
+
+ TO DO:
+ - Update Notes for full document
+ - ADD INSURANCE PAGE:
+    - Lists all insurances
+    - Add instructions as to how to find what insurance you have
+    - Add disclaimer "WE TRY TO CHECK EVERY DEDUCTIBLE TO REDUCE SURPRISES BUT YOU ARE RESPONSIBLE FOR KNOWING YOUR INSURANCE COVERAGE" or something
+
+TO ADD OVERALL:
+ - ADD TO THIRDSECTION:
+     - Fix Bios
+     - Add click effects to cards
+     - Add photos and bios
+
+ - ADD TO FOURTHSECTION:
+    - Where are you located? question
+    - Map of location
+    - Do you have parking? question
+    - Direction to parking
+    - Move whole section UP
+  
+ - ADD FAQ QUESTIONS
+ 
+ - ADD ABOUT US PAGE
+    - Move SECOND SECTION to different page
+    - Add photos?
+
+ - ADD SERVICES PAGE
+    - Add: ADHD testing, Genetic Testing, Psychiatric Testing, Theraputic Assessment, and Neurofeedback Coming Soon
+    - Write descriptions for each
+ 
+ - ADD OPENINGS PAGE
+    - List who has openings?
+    - Part of the Our Team page?
+
+*/
+
+/* MOBILE STYLESHEET */
+
+header {
+    //sets background color to light blue, any text to bold and centered, adds margin spacing to the logo
+    background-color: @lightColor6;
+    font-weight: bold;
+    margin: .5em;
+    padding: .5em;
+    text-align: center;
+    a {
+        //makes the Beautiful Minds logo centerd on any mobile size, only taking up 75% of the page width
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        img {
+            width: 75%;
+        }
+    }
+    button {
+        //makes the buttons in the nav menu yellow, hug the right side, no border, and fill the width of the page
+        background: @lightColor6;
+        float: right;
+        border: none;
+        margin: auto;
+    }
+    .hamburger, .cross {
+        //makes the x and hamburger buttons small (to fit on the page)
+            img {
+                width: 2.4em;
+            }
+        }
+    .accentimg {
+        //doesn't display the robot head in mobile size, makes the robot head 12% of the width, hug the right, and adds space on the right side away from the edge of the page
+        display: none;
+        width: 12%;
+        float: right;
+        padding-right: 2em;
+    }
+    .logo {
+        display: block;
+    }
+    .logo_desktop {
+        display: none;
+    }
+}
+
+nav {
+    //sets the color of the text to black and adds space around the entire navigation box
+    color: @darkColor;
+    padding: 0em .5em .5em .5em;
+    a {
+        &:link {
+            //BASE button style - 5px rounded corners, no underline, yellow background, black text, width fills the container, padding to give the text breathing room, and margin to add space between the edge of the page and the container
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: @color2;
+            color: @darkColor;
+		    width: auto;
+            padding: .25em 1em .25em 3.5em;
+            margin-top: .4em;
+            margin-bottom: .4em;
+        }
+        &:active {
+            //CLICKING button style - changes background color of button to dark orange, shrinks the shadow distance and changes shadow color to brown
+            color: @lightColor;
+            background-color: @color4;
+        }
+        &:visited {
+            //ALREADY CLICKED button style - makes sure the text stays black instead of changing color
+            color: @darkColor;
+        }
+    }
+    img {
+        //styles the button HEXAGONS - makes the hex's tiny, hug the left side of the text box, and centers the shape using margins
+        width: 7%;
+        float: left;
+        margin-right: .5em;
+        margin-top: .2em;
+    }
+}
+nav.menu_desktop {
+    //hides the desktop horizontal nav menu
+    display: none;
+}
+
+main {
+    //sets the overall background color to light blue and text to black
+    background-color: @lightColor6;
+    color: @darkColor;
+    h2 {
+        //sets the text color to black, text size a little bigger, and align to center
+        color: @darkColor;
+        text-align: center;
+        font-size: 1.8em;
+    }
+    p {
+        //gives all paragraphs breathing room from the edges of the page
+        padding: 1em;
+    }
+    strong {
+        //increases the font size of STRONG elements
+        font-size: 1.5em;
+    }
+    a {
+        //removes the underline from links
+        text-decoration: none;
+    }
+    section {
+        h3 {
+            //sets h3's in ALL sections to be centered
+            text-align: center;
+        }
+    }
+    .button {
+        //USED FOR CRISIS BUTTON - sets background color to orange, text to black and centered, rounds the corners fully, 75% width of page, margin centers block on page
+        background-color: @color4;
+        color: @darkColor;
+        text-align: center;
+        border-radius: 40px;
+        display: block;
+        width: 75%;
+        margin: auto;
+        &:hover {
+            //changes background color to yellow, with a rounded dark yellow shadow
+                background-color: @color2;
+                //box-shadow: 3px 4px @darkColor2;
+            }
+        &:active {
+            //changes background color to light orange
+            background-color: @lightColor4;
+        }
+    }
+    .question {
+        // QUESTIONS FOR THE FAQ PAGE
+        background-color: rgba(255, 255, 255, .5);
+        padding: 1em .25em .75em .25em;
+        margin: .4em;
+        color: @darkColor;
+        border-radius: 35px;
+    }
+    .highlight {
+        // FAQ PAGE - highlights the more questions section
+        padding-bottom: 1em;
+        margin-top: .75em;
+        margin-bottom: .75em;
+        //background-color: rgba(255, 255, 255, .85);
+        background-color: @lightColor6 ;
+        text-align: center;
+        width: 100%;
+        .button {
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    .span_4_of_12 {
+        width: auto;
+    }
+    iframe {
+        width: 90%;
+        height: 250px;
+        display: block;
+        margin: 1em auto 0 auto;
+        border-radius: 10px;
+    }
+
+    dl{
+        background-color: @color3;
+        border-radius: 15px;
+        width: 90%;
+        padding: .01em .01em .5em .01em;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    dt {
+        cursor: pointer;
+        //text-transform: uppercase;
+        border-radius: 10px 10px 0 0;
+        background-color: rgba(255, 255, 255, .5);
+        margin: .75em .5em 0em .5em;
+        padding: .25em .25em .25em .25em;
+        font-size: 1.1em;
+        //font-weight: bold;
+        //text-align: center;
+        &:hover {
+            background-color: rgba(255, 255, 255, .85);
+            //background-color: @color4;
+            //color: @color4;
+        }
+    }
+    dt:first-child {
+        margin-top: .5em;
+    }
+    dd{
+        display: none;
+        //padding: 1em 0 1em 2em;
+        background-color: rgba(255, 255, 255, .5);
+        margin: 0 .55em .5em .55em;
+        border-radius: 0 0 10px 10px;
+        p {
+            padding: .5em;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .25));
+        }
+        ul {
+            width: 75%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        li {
+            padding-top: .25em;
+            padding-bottom: .25em;
+        }
+    }
+
+    /*FAQ drop down list arrows*/
+    /* arrow icon left */
+    dt:before {
+        border: 0.5em solid;
+        border-color: transparent transparent transparent @color3;
+        content: '';
+        display: inline-block;
+        height: 0;
+        margin-left: 0.5em;
+        margin-right: 0.25em;
+        vertical-align: middle;
+        width: 0;
+    }
+    dt:hover:before {
+        border-left-color: @color3;
+    }
+    
+    /* arrow icon down */
+    dt.open:before {
+        border-color: @color3 transparent transparent transparent;
+        border-bottom-width: 0;
+    }
+
+    dt.open:hover:before {
+        border-left-color: transparent;
+        border-top-color: @color3;
+    }
+    
+    section.firstsection {
+        //firstsection SECTION
+        //background image transparent hexagons, centered over a blue background that stays in place while scrolling
+        background-image: url(../images/honeycomb_background.svg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: @color1;
+        //rounds the corners of section, adds margin breathing room between the page and section, padding adds room between buttons and text and the edges of the section
+        border-radius: 40px;
+        margin: .5em;
+        padding-top: 1em;
+        padding-bottom: 2em;
+        h2 {
+            //makes the Partnering for Resilience white with a light blue shadown and a little breathing room at the top
+            padding-top: .5em;
+            text-shadow: 1.5px 2px @lightColor1;
+            color: @lightColor;
+            padding-left: .25em;
+            padding-right: .25em;
+        }
+        a {
+            //Patient Portal, Phone, and Location buttons at top of page - makes text black and bold, background color light blue, adds room around text with padding, spaces the buttons out vertically with margin, removes underline
+            color: @darkColor;
+            background-color: @color2;
+            padding: 0em .75em .75em .75em;
+            margin-bottom: 1em;
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+                //changes background color to yellow, text to italic, and adds a dark yellow shadow
+                    font-style: italic;
+                    background-color: @lightColor;
+                    //box-shadow: 2px 4px @darkColor2;
+            }
+            &::active {
+                //changes background color to light orange
+                //box-shadow: 3px 3px @color2;
+                background: @color2;
+            }
+        }
+        img {
+            //makes button images small, centered using margins, and adds space between text / edges and image
+            width: 20%;
+            padding-top: 1em;
+            padding-bottom: .5em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    section.secondsection {
+        //secondsection SECTION
+        h3 {
+            //HEADER OF SECTION - padding spaces heading out against the edge of the page, margin spaces it out from the bottom of section one, increases font size a bit, text transform removes the UPPERCASE styling, hugs left side, text color dark blue, border-bottom adds the blue line across the screen
+            padding: 1em 1em 0em 1em;
+            margin-top: .75em;
+            font-size: 1.8em;
+            text-transform: none;
+            text-align: left;
+            color: @color1;
+            //background-color: rgba(202, 247, 252, .75);
+            border-bottom: 4px solid @lightColor1;
+        }
+        p {
+            //makes the text dark blue, makes the background a tad lighter than the rest of the page so it's easier to read, aligns to center
+            color: @color1;
+            background-color: rgba(202, 247, 252, .75);
+            text-align: center;
+            border-radius: 20px;
+        }
+    }
+    section.thirdsection {
+        //thirdsection SECTION - adds a little space to the bottom of the section
+        padding-bottom: 1.5em;
+        h3 {
+            //HEADER OF SECTION - padding spaces heading out against the edge of the page, ??not sure what margin is doing here??, increases font size a tad, text transform removes the UPPERCASE styling, hugs left side, text color dark blue, border bottom adds the blue line across the screen
+            padding: .2em 0em .2em 1em;
+            margin-bottom: 0em;
+            font-size: 1.8em;
+            text-transform: none;
+            text-align: left;
+            color: @color1;
+            //background-color: rgba(202, 247, 252, .75);
+            border-bottom: 4px solid @lightColor1;
+        }
+        h4 {
+            //HEADER FOR TEAM SECTION - increase font size just a tiny bit, makes text black, background color of yellow, adds a little breathing room to the yellow around text with padding
+            font-size: 1.2em;
+            color: @darkColor;
+            background-color: @color2;
+            padding: .5em;
+        }
+        p {
+            //adds spaces around text, margin bumps the text down so its not touching the header or the specialties text, background color is transparent white to make more readable
+            padding: .5em 2em;
+            margin-top: .75em;
+            margin-bottom: .75em;
+            background-color: rgba(255, 255, 255, .6);
+        }
+        img {
+            //HEADSHOT IMG - 65% of width of page, margins center on page
+            width: 65%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul {
+            //SPECIALTIES LIST - adds space
+            padding-left: 1.5em;
+            padding-bottom: 1em;
+        }
+        a {
+            //MORE PROVIDERS BUTTON
+            &:hover {
+                //makes text italic, background color to electric blue with a blue shadow
+                    font-style: italic;
+                    background-color: @lightColor3;
+                    //box-shadow: 4px 4px @color3;
+            }
+            &:active {
+                //changes background color to dark blue and text to white
+                background-color: @darkColor3;
+                color: @lightColor;
+            }
+        }
+        .providers {
+            //YELLOW PROVIDERS CARD - margin adds breathing room between card and page, padding top creates space between image and edge, background color is light yellow, border radius rounds corners of section
+            margin: .5em;
+            padding-top: .5em;
+            //background-color: rgba(255, 255, 255, .6);
+            background-color: @lightColor2;
+            border-radius: 20px;
+            h5 {
+                //HEADER OF PROVIDER CARD ON TEAM PAGE - increases font size a tiny bit, background color yellow, padding adds rooms around text, margin bottom adds room between the header and the photo, line height increases the space between lines
+                font-size: 1.3em;
+                background-color: @color2;
+                padding: .75em 1em;
+                margin-bottom: .75em;
+                line-height: 1.5em;
+            }
+            img {
+                //HEXAGONS ON TEAM PAGE - width is tiny, float to left of text, margin spaces away from text so its not touching
+                width: 5%;
+                float: left;
+                margin-right: .5em;
+                margin-top: .3em;
+            }
+            .hero {
+                //HEADSHOT IMG ON TEAM PAGE - 65% width on page, ??clearing a float??, margin centers on the page, margin bottom separates from intro text
+                width: 65%;
+                float: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: .3em;
+            }
+            li {
+                font-size: 1.25em;
+                line-height: 1.5em;
+            }
+        }
+        .button {
+            //?? UNSUSED ?? - blue with bold font button if there was one
+            padding: .4em;
+            margin-top: .75em;
+            margin-bottom: .75em;
+            background-color: @color3;
+            font-weight: bold;
+        }
+        .borderbottomorange {
+            //turns the underline of the header ORANGE
+            background-color: @lightColor6;
+            border-bottom: 4px solid @color4;
+        }
+        .borderbottoyellow {
+            //turns the underline of the header YELLOW
+            background-color: @lightColor6;
+            border-bottom: 4px solid @color2;
+            margin-bottom: .75em;
+        }
+        .borderbottomblue {
+            //turns the underline of the header YELLOW
+            background-color: @lightColor6;
+            border-bottom: 4px solid @lightColor1;
+            margin-bottom: .75em;
+        }
+    }
+    section.fourthsection {
+        //fourthsection SECTION - background color light orange, rounded corners, margin gives breathing room between section and page edges, padding adds a little room between header and edge as well as info text and edge
+        background-color: @color3;
+        border-radius: 40px;
+        margin: .5em;
+        padding-top: .1em;
+        padding-bottom: 1em;
+        h2 {
+            //HEADER - text color black, background color transparent white, rounded corners with a little room all around using padding and margin
+            color: @darkColor;
+            background-color: rgba(255, 255, 255, .5);
+            //background-color: @color2;
+            border-radius: 30px;
+            padding: .5em;
+            margin: .25em; 
+        }
+        h3 {
+            text-align: center;
+            padding-left: 1em;
+        }
+        p {
+            //aligns all paragraphs to center
+            text-align: center;
+            margin-bottom: 1em;
+            //border-radius: 8px;
+        }
+        a {
+            //FAQ BUTTONS - background color orange, padding adds ample room around text, 90% width of page, rounded corners, centered on page with margins, text centered and black
+            background-color: @color4;
+            padding: .75em;
+            width: 90%;
+            border-radius: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: @darkColor;
+            &:hover {
+                //changes background to yellow with italic font and a dark yellow shadow
+                background-color: @color2;
+                //color: @darkColor;
+                font-style: italic;
+                //box-shadow: 4px 4px @darkColor2;
+            }
+            &:active {
+                //changes background to dark yellow with a smaller shadow
+                //box-shadow: 3px 3px 3px @color2;
+                background: @darkColor2;
+            }
+        }
+        ul {
+            //LIST STYLING FOR FAQ PAGE - displays in a list for, margin spaces text from left edge, text hugs left, padding adds breathing room under header
+            display: table;
+            margin-left: 1.5em;
+            text-align: left;
+            padding-top: .5em;
+        }
+        img {
+            //HEXAGON STYLING FOR FAQ PAGE - tiny width with margin spacing to make sure it doesn't touch text
+            width: .75em;
+            margin-right: .5em;
+        }
+        img#parkingpic {
+            width: 85%;
+            display: block;
+            border-radius: 10px;
+            margin: 0 auto .5em auto;
+        }
+        .col {
+            float: none;
+        }
+    }
+    .insurance {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 .5em 0 .5em;
+        background-color: rgba(202, 247, 252, .75);
+        //background-color: @lightColor6;
+        border-radius: 20px;
+        .insurancetitle {
+            background-color: @color1;
+            color: @lightColor;
+            font-weight: bold;
+            padding: .5em 0 .5em 0;
+            margin: 1em auto .25em auto;
+            text-align: center;
+            border-radius: 13px;
+            font-size: 1.15em;
+            margin-top: 2em;
+        }
+        .insurancetitle:first-child {
+            margin-top: 0;
+        }
+        .insurancetitle:last-child {
+            margin-bottom: 0;
+        }
+        ul {
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+            li {
+                padding: .2em 0;
+            }
+        }
+    }
+    .services {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        //padding: .5em .5em 0 .5em;
+        background-color: rgba(238, 253, 255, 0.75);
+        border-radius: 10px;
+        margin-bottom: .5em;
+        .servicetitle {
+            background-color: @color2;
+            color: @darkColor;
+            border-radius: 10px 10px 0 0;
+            font-size: 1.15em;
+            width: 100%;
+        }
+        p {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            padding-bottom: 1em;
+            li {
+                padding: .5em 0;
+            }
+        }
+    }
+}
+
+footer {
+    //FOOTER - adds a very light blue, transparent overlay to the footer as a whole
+    background-color: @lightColor6;
+    opacity: 75%;
+    p {
+        //COPYRIGHT TEXT - decreases text size and centers it
+        font-size: .65em;
+        text-align: center;
+    }
+    img {
+        //ROBO HEAD - 20% width of page, margin centers on page, padding spaces out from nav section and section above, opacity makes the head standout less
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: .5em;
+        padding-top: 1em;
+        opacity: 55%;
+    }
+    nav {
+        //FOOTER NAVIGATION - background color adds a gradient from light to electric blue, ?? text is white ??, adds a little breathing room around whole nav element
+        //background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), @color3);
+        background-color: @color1;
+        color: @lightColor;
+        padding: .5em;
+        margin-top: 3.5em;
+        a {
+            &:link {
+                //background color transparent white with bold text
+                background-color: @color1;
+                color: @lightColor;
+            }
+            &:hover {
+                //changes padding to shift more left, text to italic, background color to dark blue with a white shadow
+                padding-left: 1.5em;
+                background-color: @color1;
+                //box-shadow: 3px 3px rgba(255, 255, 255, .5);
+            }
+            &:active {
+                //background color to light orange
+                font-style: italic;
+            }
+        }
+    }
+    #copy {
+        //COPYRIGHT ID - makes text color black and background color electric blue to match the footer gradient
+        color: @lightColor;
+        background-color: @color1;
+    }
+}
+
+//DETERMINES SIZING FOR ALL HEADINGS FOR THE PAGE BY EM
+/*main,
+header,
+footer,
+nav {
+    padding: 1em;
+}*/
+
+h1 {
+    //makes all H1 elements - black text with nearly twice the 18px font size
+    .headingStyle(@darkColor; 1.8em);
+}
+
+h2 {
+    //OLD STYLING - .headingStyle(@lightColor; 1.4em);
+    //makes all H2 elements - black text, nearly one and a half times larger than 18px font size, bolded, sightly more line spacing, margin spacing below
+    color: @darkColor;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    //makes all H3 elements - black text with slightly larger than 18px font size
+    .headingStyle(@darkColor; 1.1em);
+}
+
+h4 {
+    //makes all H4 elements - black text with slightly smaller than 18px font size
+    .headingStyle(@darkColor; .9em);
+}
+
+h5 {
+    //makes all H5 elements - black text with slightly smaller than 18px font size
+    .headingStyle(@darkColor; .85em);
+}
+
+h6 {
+    //makes all H6 elements - black text with 3/4th times smaller than 18px font size
+    .headingStyle(@darkColor; .75em);
+}
+
+a {
+    &:link {
+        //makes all link/buttons have black text
+        color: @darkColor;
+    }
+    /*&:visited {
+        //makes all link/buttons have black text even after clicking
+        color: @darkColor;
+    }*/
+}
+footer {
+    a {
+        &:link {
+            color: @lightColor;
+        }
+        &:visited {
+            color: @lightColor;
+        }
+    }
+}
+
+body {
+    //sets all font for page as Ubuntu - a simple slightly wide sans-serif font
+    font-family: "Ubuntu", sans-serif;
+    //sets all 1em sizes to 18px
+    font-size: 18px;
+    //adds a little breathing room between lines
+    line-height: 1.5em;
+    //sets background of whole page to light blue
+    background-color: @lightColor6;
+    //sets all text color to black
+    color: @darkColor;
+}
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+    
+    header {
+        //makes header text hug left with a large padding to push it off the edge of the page
+        text-align: left;
+        padding-left: 3em;
+        .hamburger, .cross {
+            img {
+                //sets sizing for x and hamburger for tablet sizing
+                width: 3.5em;
+            }
+        }
+        a {
+            img {
+                //increases the size of the Beautiful Minds Logo
+                width: 55%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                //keeping these here in case I want to add text next to the image header in the future
+                //vertical-align: middle;
+                //margin-right: 1em;
+            }
+        }
+        .logo {
+            display: block;
+        }
+        .logo_desktop {
+            display: none;
+        }
+    }
+    
+    nav {
+        //padding increases space between edges of nav container and page
+        padding-left: 3em;
+        padding-right: 3em;
+        img {
+            //keeps HEXAGONS small but not teeny-tiny and removes some space that would uncenter them from the text
+            width: 5%;
+            margin-top: 0;
+        }
+    }
+    
+    main {
+        //margins increase spacing from edges of page left and right
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        div.robot_bg {
+            //adds ROBOT BEES AND HEX BACKGROUND to INDEX page div, stays in place with scroll
+            background-image: url(../images/robotbackground_scroll.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        div.hexbees_small_bg {
+            //adds BEES AND HEX (shorter and transparent) BACKGROUND to FAQ page div, stays in place with scroll
+            background-image: url(../images/hexagons_bees_small.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        div.hexbees_bg {
+            //adds BEES AND HEX (full color and full length) BACKGROUND to TEAM page div, stays in place with scroll
+            background-image: url(../images/hexagons_bees_light.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .button {
+            //padding-bottom: .5em; - keeping here just in case but currently UNUSED
+            width: 50%;
+        }
+        .question {
+            // ?UNUSED? - 
+            border-radius: 25px;
+        }
+        dt {
+            font-size: .85em;
+        }
+        dd {
+            font-size: .85em;
+        }
+        section.highlight {
+            // ?UNUSED? - 
+            border-radius: 10px;
+            .button {
+                padding-top: .5em;
+                width: 50%;
+                img {
+                    vertical-align: none;
+                }
+                p {
+                    border-radius: 10px;
+                }
+            }
+        }
+        section.secondsection {
+            h3 {
+                //thickens the underline just a bit
+                border-bottom: 5px solid @lightColor1;
+            }
+        }
+        section.thirdsection {
+            h3 {
+                //thickens the underline just a bit
+                border-bottom: 5px solid @lightColor1;
+            }
+            .providers {
+                //margin adds a little space all around the section making it just a little smaller, border radius rounds the corners more
+                margin: 1.5em;
+                p {
+                    font-size: .75em;
+                }
+                li {
+                    font-size: 1em;
+                    padding-left: 1em;
+                    padding-right: 3em;
+                }
+            }
+        }
+        section.fourthsection {
+            //rounds the corners more
+            border-radius: 30px;
+            h2 {
+                //HEADING - rounds the corners of the white more
+                border-radius: 20px;
+            }
+            a {
+                //rounds the corner of the button a bit more
+                border-radius: 30px;
+            }
+            ul {
+                //margin centers the list in the page, text hugs left
+                display: table;
+                margin: 0 auto;
+                text-align: left;
+            }
+            img#parkingpic {
+                width: 95%;
+            }
+            .span_6_of_12 {
+                width: auto;
+            }
+        }
+        .insurance {
+            ul {
+                width: 85%;
+            }
+        }
+        .services {
+            width: 85%;
+        }
+    }
+    
+    footer {
+        img {
+            //adds space to top of robot in footer
+                padding-top: 1em;
+        }
+    }
+    
+    body {
+        //changes 1em from 18px in mobile to 24px
+        font-size: 24px;
+    }
+}
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+  
+    header {
+        //makes header fill full page width
+        //width: 100%;
+        button.hamburger {
+            //hides hamburger menu button from mobile views
+            visibility: hidden;
+        }
+        button.cross {
+            //hides x menu button from mobile views
+            visibility: hidden;
+        }
+        img {
+            width: 15%;
+            margin-right: 1em;
+            margin-left: 1em;
+            vertical-align: middle;
+        }
+        h1 {
+            font-size: 65%;
+            font-weight: lighter;
+            display: inline;
+            text-transform: none;
+        }
+        a {
+            text-decoration: none;
+            font-size: 175%;
+            font-weight: lighter;
+            img {
+                //makes Beautiful Minds Logo take up 30% width of the page
+                margin-right: 1em;
+                width: 15%;
+                vertical-align: middle;
+            }
+        }
+        .logo {
+            display: none;
+        }
+        .logo_desktop {
+            display: inline-block;
+        }
+    }
+    
+    nav{
+        //aligns all text to center, margins center it on page (turns nav from vertical to horizontal)
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+            a {
+                //creates space between text on nav buttons left and right
+                padding-left: 6em;
+                padding-right: 6em;
+                color: @lightColor;
+                background-color: @color1;
+                &:link{
+                    background-color: @color1;
+                    color: @lightColor;
+                }
+                &:hover {
+                    // changes text color to white, background color to orange and adds a light orange shadow
+                    //background-color: rgba(255, 255, 255, .6);
+                    background-color: @color2;
+                    color: @darkColor;
+                    //border: 3px solid @color1;
+                }
+                &:visited {
+                    color: @lightColor;
+                }
+            }
+            .urgent {
+                //adds a little space between the crisis button and the header
+                color: @color4;
+                &:hover {
+                    color: @lightColor;
+                    background-color: @color4;
+                }
+            }
+            img {
+                //stops HEXAGONS hugging text and makes them smaller
+                //float: none;
+                //width: 2%;
+                display: none;
+            }
+        }
+    nav.menu_desktop {
+        //unhides desktop navigation, background color yellow
+        display: block;
+        background-color: @color1;
+        opacity: 90%;
+        padding: 0em;
+        margin-bottom: 1.5em;
+        //border-bottom: 5px solid @lightColor1;
+        //border-top: 5px solid @lightColor1;
+        a {
+            //adds space between text left and right of nav buttons
+            padding: .25em .5em .25em .5em;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            font-size: .85em;
+            border-radius: 0;
+            background-color: @color1;
+            border-radius: 4px;
+            //color: @lightColor;
+            &:hover {
+                color: @darkColor;
+                background-color: @color2;
+                font-style: normal;
+            }
+        }
+        .urgent {
+            //adds a little space between the crisis button and the header
+            color: @color4;
+            &:hover {
+                color: @lightColor;
+                background-color: @color4;
+            }
+        }
+        li {
+            //sets buttons horizontal instead of vertical
+            display: inline-block;
+            margin-left: .5em;
+            margin-right: .5em;
+        }
+        img {
+            //readusts size and spacing of HEXAGONS
+            padding-top: .5em;
+            width: .75em;
+        }
+        img#imageinnav {
+            width: 16em;
+            margin: .5em;
+        }
+    }
+    
+    main {
+        div.robot_bg {
+            //changes background to cover full page instead of contain to smaller sizes
+            background-size: cover;
+
+            /* KEEPING JUST IN CASE SOMETHING GOES HORRIBLY WRONG
+            background-image: url(../images/robotbackground_scroll.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;*/
+        }
+        /* NOT SURE WHY I DECIDED TO KEEP THIS BUT OKAY
+        
+        div.hexbees_small_bg {
+            background-image: url(../images/hexagons_bees_small.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        div.hexbees_bg {
+            background-image: url(../images/hexagons_bees_light.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        */
+        #home {
+            // ?? really not sure what this does in terms of styling ??
+            width: 100%;
+        }
+        .accentimg {
+            //unhides robot face in upper right header - REDUNDANCE ???
+            display: block;
+        }
+        .highlight {
+            width: 45%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        iframe {
+            //width: 45%;
+            margin-left: 2em;
+            display: inline-block;
+            float: none;
+            height: 650px;
+        }
+        dl {
+            width: 70%;
+        }
+        dt {
+            font-size: 1em;
+        }
+        dd {
+            font-size: 1em;
+            ul {
+                width: 50%;
+            }
+            p {
+                padding: 1em 3em 1em 3em;
+                text-align: left;
+            }
+        }
+        
+        section.firstsection {
+            //WELCOME SECTION
+            width: 85%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            h2 {
+                //makes Partnering for Resilience a little bigger
+                font-size: 2.5em;
+            }
+            ul {
+                //3 MAIN BUTTONS in first section - centers the buttons
+                text-align: center;
+            }
+            li {
+                //3 MAIN BUTTONS in first section - horizontal instead of vertical and adds spacing between them
+                display: inline-block;
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+            img {
+                //3 MAIN BUTTONS in first section - increases sizing of logos 
+                width: 60px;
+            }
+            .button {
+                //3 MAIN BUTTONS in first section - makes text fill buttons
+                width: 100%;
+            }
+            div {
+                a.button {
+                    //used for buttons on the resources page
+                    width: 67%;
+                }
+            }
+        }
+        section.secondsection {
+            margin-left: 8em;
+            margin-right: 8em;
+        }
+        section.thirdsection {
+            margin-left: 3em;
+            margin-right: 3em;
+            div.providers {
+                //makes the Team section take up less of the page, margin centers in on the page
+                width: 30%;
+                margin: .5em;
+            }
+        }
+        section.fourthsection {
+            margin-left: 4em;
+            margin-right: 4em;
+            h3 {
+                text-align: left;
+                font-size: 1.25em;
+                line-height: 1.5em;
+            }
+            p {
+                text-align: left;
+                font-size: 1.25em;
+                line-height: 1.5em;
+                //padding-left: 3em;
+                margin-bottom: 0;
+            }
+            p:first-child {
+                text-align: left;
+            }
+            img#parkingpic {
+                width: 65%;
+                margin: 0 0 .5em 1em;
+                align-content: left;
+            }
+            .col {
+                float: left;
+            }
+            .span_6_of_12 {
+                width: 49.5%;
+            }
+        }
+        .insurance {
+            width: 75%;
+            .insurancetitle {
+                padding: .5em 0 .5em 0;
+                margin: 1em auto;
+            }
+            ul {
+                width: 50%;
+            }
+        }
+        .services {
+            width: 65%;
+            p{
+                font-size: .75em;
+            }
+            li {
+                width: 65%;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+    footer {
+        img {
+            //reduces the ROBO HEAD to only take up 15% of the page width and adds extra padding (??padding might be redundant??)
+            width: 15%;
+            padding-top: 1em;
+            }
+        nav{
+            //centers nav footer
+            text-align: center;
+            a {
+                &:link {
+                    //reduces padding around text on footer buttons
+                    padding-left: 2em;
+                    padding-right: 2em;
+                }
+                &:visited {
+                    //changes the text color of visited buttons to dark brown (nearly black)
+                    color: @lightColor;
+                }
+                &:hover {
+                    //changes text color to white (?? might be redundant ??)
+                    color: @lightColor;
+                }
+            }
+            li {
+                //changes buttons from vertical to horizontal
+                display: inline-block;
+            }
+        }
+    }
+    
+    body {
+        //KEEPING JUST IN CASE BUT NOT CURRENTLY IN USE
+        //margin-left: 1.5em;
+        //margin-right: 1.5em;
+    }
+}
+
+/*
+
+DESKTOP BIGGER STYLESHEET
+
+The following CSS affects all screen sizes larger than 1385 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1385px) {
+
+    header {
+        //makes the text next to header logo a little bigger to fit nicely on larger screens
+        h1{
+            font-size: 106%;
+        }
+
+    }
+
+}
