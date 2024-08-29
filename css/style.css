@@ -575,6 +575,8 @@ footer nav a:active {
 footer #copy {
   color: #FFFFFF;
   background-color: #044e77;
+  line-height: 0.75em;
+  padding-bottom: 0.5em;
 }
 /*main,
 header,
